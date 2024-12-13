@@ -1,5 +1,9 @@
 # 2024.2 Avaliação do 1o período de Sistemas Operacionais
 
+# Informações pessoais
+- Tâmara Thais Lourenço de carvalho
+- Matricula: 20232014040040
+
 ## Informações gerais
 - **Objetivo do repositório**: Avaliação do 1o bimestre da Disciplina de sistemas operacionais do curso de TADS do IFRN-CNAT
 - **Público alvo**: alunos da disciplina de SO (Sistemas Operacionais) do curso de TADS (Superior em Tecnologia em Análise e Desenvolvimento de Sistemas) no CNAT-IFRN (Instituto Federal de Educação, Ciência e Tecnologia do Rio Grande do Norte - Campus Natal-Central).
