@@ -28,6 +28,9 @@
 
 - Gerenciamento de Arquivos: O SO organiza tudo no disco. Se eu salvo um trabalho da faculdade numa pasta, ele cuida de colocar o arquivo no lugar certo e ainda protege com permissões, se eu quiser, pra que só eu consiga acessar.
 
+
+
+
   
 ## Questão 2. Estrutura de sistemas operacionais
 ### Análise das Arquiteturas de Sistemas Operacionais: Monolítica, Microkernel e em Camadas
@@ -57,6 +60,10 @@ A escolha da arquitetura de um sistema operacional influencia bastante o custo, 
 - **Monolítica**: A atualização e a correção de falhas podem ser complicadas, já que uma modificação pode afetar várias partes do sistema ao mesmo tempo.
 - **Microkernel**: Aqui, é muito mais fácil corrigir ou atualizar, pois os módulos podem ser alterados sem afetar o núcleo.
 - **Em Camadas**: Também facilita a atualização, já que mudanças podem ser feitas em camadas isoladas, desde que as interações entre elas sejam bem controladas.
+
+
+
+
 
 
 ## Questão 3. Introdução à Segurança de Sistemas Operacionais
@@ -97,6 +104,8 @@ A escolha da arquitetura de um sistema operacional influencia bastante o custo, 
 
 
 
+
+
 ## Questão 4. Custo de Processamento versus Algoritmo Ótimo de Escalonamento
 
 No escalonamento de processos, a escolha do algoritmo pode realmente impactar a performance do sistema operacional, principalmente quando a gente pensa no tempo de resposta, tempo de espera e utilização do processador. Vou explicar como vejo esses algoritmos e como eles afetam a performance de um sistema:
@@ -127,7 +136,8 @@ Em resumo, a escolha do algoritmo depende muito do tipo de sistema e das necessi
 
 
 
-# Questão 5. Aplicativo em python vs aplicativos em c
+
+## Questão 5. Aplicativo em python vs aplicativos em c
 
 Quando comparamos o processo de execução de um aplicativo escrito em **Python** e um escrito em **C**, fica claro que os dois têm abordagens bem diferentes, principalmente em como o código é transformado até ser executado pelo hardware.
 
