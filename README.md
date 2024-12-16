@@ -14,65 +14,50 @@
 - **Lembre de fazer o fork deste repositório**
 - As questões foram construídas com o auxílio do [copilot](https://copilot.microsoft.com/)
 
-# Questão 1. Introdução a sistemas operacionais
+# RESPOSTAS:
+## Questão 1. Introdução a sistemas operacionais
 
-Considere as funções e objetivos principais de um sistema operacional conforme discutido no texto. Explique como um sistema operacional gerencia os recursos de hardware e software de um computador para garantir eficiência e segurança. Em sua resposta, aborde os seguintes pontos:
 
-- Gerenciamento de processos
-- Gerenciamento de memória
-- Gerenciamento de dispositivos de entrada e saída
-- Gerenciamento de arquivos
+- Para iniciar as conclusões do 1BM sobre o que é SO< na minha visão, é como o "gerente geral" do computador, o "cérebro". Ele organiza e controla tudo o que está acontecendo, tanto no hardware quanto no software, pra garantir que as coisas funcionem bem e com segurança. Segue os pontos que foram pedidos na questão:
 
-**Dica**: Pense em exemplos práticos de como o sistema operacional realiza essas tarefas no dia a dia de um usuário.
+- Gerenciamento de Processos: O SO cuida dos programas que estão sendo usados, decidindo quem pode usar o processador em cada momento. Por exemplo, quando eu estou assistindo a uma aula online e, ao mesmo tempo, usando um editor de texto pra anotar, o SO alterna entre essas tarefas de forma tão rápida que parece que tudo acontece ao mesmo tempo.
 
-**Copilot informa**: Essa questão incentiva os alunos a explorarem os conceitos fundamentais e a aplicarem o conhecimento teórico em situações práticas. Se precisar de mais alguma coisa, estou aqui para ajudar!
+- Gerenciamento de Memória: Ele é quem distribui a RAM para os programas que abri. Se eu abro um jogo e deixo o navegador rodando, o SO aloca a memória pra cada um sem que um interfira no outro. Isso evita travamentos e faz o uso do computador ser mais fluido.
 
-# Questão 2. Estrutura de sistemas operacionais
+- Gerenciamento de Dispositivos de Entrada e Saída (I/O): O SO é o "tradutor" entre os dispositivos e os programas. Por exemplo, quando eu conecto um pendrive pra salvar arquivos, ele se encarrega de fazer a ponte entre o pendrive e o sistema, pra que os dados sejam transferidos corretamente.
 
-## Texto informativo
-### Estrutura de Sistemas Operacionais: Custo de Desenvolvimento e Segurança da Informação
+- Gerenciamento de Arquivos: O SO organiza tudo no disco. Se eu salvo um trabalho da faculdade numa pasta, ele cuida de colocar o arquivo no lugar certo e ainda protege com permissões, se eu quiser, pra que só eu consiga acessar.
 
-A estrutura de um sistema operacional (SO) é fundamental para determinar tanto o custo de desenvolvimento e manutenção quanto a segurança da informação. Existem várias arquiteturas de SO, como monolítica, microkernel e em camadas, cada uma com suas próprias implicações em termos de custo e segurança.
+  
+## Questão 2. Estrutura de sistemas operacionais
+### Análise das Arquiteturas de Sistemas Operacionais: Monolítica, Microkernel e em Camadas
 
-#### Custo de Desenvolvimento e Manutenção
+A escolha da arquitetura de um sistema operacional influencia bastante o custo, a segurança e a manutenção do sistema. Vou apresentar uma análise das arquiteturas monolítica, microkernel e em camadas, considerando a complexidade de implementação, a especialização necessária da equipe, as questões de segurança e a facilidade de atualização.
 
-1. **Arquitetura Monolítica**:
-   - **Desenvolvimento**: Geralmente, mais rápida de desenvolver inicialmente, pois todos os componentes do SO são integrados em um único bloco de código.
-   - **Manutenção**: Pode ser mais complexa e cara, pois qualquer alteração em um componente pode afetar todo o sistema, exigindo testes extensivos e cuidadosos.
+### **Complexidade de Implementação e Manutenção**
 
-2. **Arquitetura Microkernel**:
-   - **Desenvolvimento**: Pode ser mais demorada e cara inicialmente, pois envolve a criação de um núcleo mínimo e a implementação de serviços adicionais como processos separados.
-   - **Manutenção**: Mais fácil e menos custosa, já que os componentes são isolados. Atualizações e correções podem ser feitas em módulos específicos sem impactar o núcleo do sistema.
+- **Monolítica**: Inicialmente, o desenvolvimento é mais rápido porque todos os componentes estão integrados em um único bloco de código. No entanto, a manutenção pode ser mais complicada, já que qualquer alteração pode afetar o sistema todo. Exemplos: **Linux** e **Unix**.
+- **Microkernel**: Esse modelo é mais demorado de implementar, já que o núcleo é mínimo e serviços são separados em módulos. Mas, a manutenção tende a ser mais simples, pois falhas ficam restritas a componentes isolados. Exemplos: **Minix** e **QNX**.
+- **Em Camadas**: A complexidade é intermediária. A manutenção é mais fácil, já que falhas podem ser isoladas em camadas específicas sem afetar o sistema todo. Exemplo: **Windows NT**.
 
-3. **Arquitetura em Camadas**:
-   - **Desenvolvimento**: Moderadamente complexa, pois cada camada deve ser bem definida e interagir corretamente com as outras.
-   - **Manutenção**: Relativamente fácil, pois problemas podem ser isolados e corrigidos em camadas específicas sem afetar o restante do sistema.
+### **Necessidade de Especialização da Equipe**
 
-#### Segurança da Informação
+- **Monolítica**: A equipe pode ser mais generalista no começo, mas conforme o sistema cresce, será necessário ter especialistas para lidar com a complexidade que surge com o tempo.
+- **Microkernel**: Exige uma equipe altamente especializada, pois o design e a comunicação entre os módulos exigem conhecimento profundo e experiência.
+- **Em Camadas**: Requer uma especialização moderada, já que cada camada precisa ser bem definida, mas a interação entre elas é mais fácil de gerenciar em comparação com o microkernel.
 
-1. **Arquitetura Monolítica**:
-   - **Segurança**: Pode ser mais vulnerável, pois uma falha em qualquer parte do sistema pode comprometer todo o SO. A integração de todos os componentes em um único bloco de código pode dificultar a implementação de medidas de segurança robustas.
+### **Potenciais Vulnerabilidades de Segurança**
 
-2. **Arquitetura Microkernel**:
-   - **Segurança**: Geralmente mais segura, pois isola os serviços em processos separados. Isso limita o impacto de uma falha ou ataque a um único componente, protegendo o núcleo do sistema e outros serviços.
+- **Monolítica**: Como todos os componentes estão juntos, uma falha pode afetar o sistema inteiro, tornando-o mais vulnerável.
+- **Microkernel**: A segurança é melhor, pois falhas em módulos isolados não comprometem o núcleo do sistema, oferecendo maior proteção.
+- **Em Camadas**: A segurança também é boa, mas depende de uma comunicação bem gerida entre as camadas para evitar falhas que possam gerar vulnerabilidades.
 
-3. **Arquitetura em Camadas**:
-   - **Segurança**: Oferece um bom equilíbrio, pois cada camada pode implementar suas próprias medidas de segurança. No entanto, a comunicação entre camadas deve ser cuidadosamente gerenciada para evitar vulnerabilidades.
+### **Facilidade de Atualização e Correção de Falhas**
 
-### Conclusão
+- **Monolítica**: A atualização e a correção de falhas podem ser complicadas, já que uma modificação pode afetar várias partes do sistema ao mesmo tempo.
+- **Microkernel**: Aqui, é muito mais fácil corrigir ou atualizar, pois os módulos podem ser alterados sem afetar o núcleo.
+- **Em Camadas**: Também facilita a atualização, já que mudanças podem ser feitas em camadas isoladas, desde que as interações entre elas sejam bem controladas.
 
-A escolha da arquitetura de um sistema operacional tem um impacto significativo tanto no custo de desenvolvimento e manutenção quanto na segurança da informação. Arquiteturas monolíticas podem ser mais rápidas e baratas de desenvolver inicialmente, mas podem acarretar custos de manutenção mais altos e maiores riscos de segurança. Por outro lado, arquiteturas microkernel e em camadas podem exigir um investimento inicial maior, mas oferecem vantagens em termos de manutenção e segurança.
-
-## Questão
-Com base no texto sobre a estrutura de sistemas operacionais, analise como as diferentes arquiteturas (monolítica, microkernel e camadas) impactam o custo com a equipe de desenvolvimento e a segurança do sistema operacional. Em sua resposta, considere os seguintes pontos:
-- Complexidade de implementação e manutenção
-- Necessidade de especialização da equipe
-- Potenciais vulnerabilidades de segurança
-- Facilidade de atualização e correção de falhas
-
-**Dica:** Utilize exemplos de sistemas operacionais reais que adotam essas arquiteturas para ilustrar sua análise.
-
-**Copilot informa**: Essa questão incentiva os alunos a considerarem tanto os aspectos econômicos quanto os de segurança ao avaliar diferentes arquiteturas de sistemas operacionais.
 
 # Questão 3. Introdução à Segurança de Sistemas Operacionais
 
