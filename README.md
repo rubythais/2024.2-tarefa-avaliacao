@@ -61,31 +61,40 @@ A escolha da arquitetura de um sistema operacional influencia bastante o custo, 
 
 # Questão 3. Introdução à Segurança de Sistemas Operacionais
 
-## Texto informativo
+### **Controle de Acesso**
 
-A segurança de um sistema operacional é um aspecto crucial que visa proteger os recursos do sistema contra acessos não autorizados, ataques maliciosos e falhas. Um sistema operacional seguro deve garantir a integridade, confidencialidade e disponibilidade dos dados e serviços. Para alcançar esses objetivos, várias técnicas e mecanismos são implementados, incluindo:
+#### Benefícios:
+- **Segurança**: O controle de acesso assegura que apenas usuários ou processos autorizados possam acessar e modificar recursos do sistema, protegendo dados e configurações sensíveis.
+- **Integridade**: Impede que modificações indesejadas ou maliciosas ocorram em arquivos e configurações, aumentando a confiabilidade do sistema.
 
-1. **Controle de Acesso**: Define quem pode acessar o sistema e quais recursos podem ser utilizados. Isso é feito através de autenticação (verificação de identidade) e autorização (permissão de acesso).
+#### Desafios:
+- **Complexidade**: A implementação de controles de acesso exige uma configuração cuidadosa de permissões, o que pode ser desafiador em sistemas grandes ou dinâmicos.
+- **Overhead**: Cada vez que um usuário tenta acessar um recurso, o sistema precisa verificar as permissões, o que pode resultar em um custo adicional de processamento.
 
-2. **Criptografia**: Utilizada para proteger dados em trânsito e em repouso, garantindo que apenas usuários autorizados possam acessar informações sensíveis.
+#### Impacto na Experiência do Usuário:
+- **Positivo**: Usuários têm maior confiança na segurança do sistema, sabendo que seus dados e recursos estão protegidos.
+- **Negativo**: Processos de autenticação e verificação de permissões podem tornar o uso do sistema mais lento e incômodo, especialmente quando exigem múltiplos passos para acesso.
 
-3. **Auditoria e Monitoramento**: Registra atividades do sistema para detectar e responder a comportamentos suspeitos ou anômalos.
+#### Exemplos Críticos:
+- Em sistemas bancários ou em servidores de arquivos, como no **Windows** ou **Linux**, onde o controle de acesso é vital para garantir que apenas usuários autorizados possam acessar dados sensíveis, como transações financeiras ou documentos confidenciais.
 
-4. **Isolamento de Processos**: Garante que os processos sejam executados em ambientes isolados, evitando que um processo comprometa a segurança de outro.
+### **Criptografia**
 
-5. **Atualizações e Patches**: Manter o sistema operacional atualizado é essencial para corrigir vulnerabilidades conhecidas e proteger contra novas ameaças.
+#### Benefícios:
+- **Proteção de Dados**: A criptografia garante que os dados tanto em trânsito quanto em repouso, fiquem protegidos contra interceptações ou acessos que não foram autorizados.
+- **Confidencialidade**: Assegura que informações sensíveis, como senhas, dados bancários ou documentos pessoais, sejam mantidas em segredo, mesmo que sejam acessadas por atacantes.
 
+#### Desafios:
+- **Desempenho**: O processo de criptografar e descriptografar dados pode consumir recursos de processamento e impactar o desempenho, especialmente em operações que envolvem grandes volumes de dados.
+- **Complexidade de Implementação**: Implementar criptografia de forma eficiente, sem introduzir vulnerabilidades, pode ser desafiador, exigindo configurações precisas e cuidados contínuos.
 
-## Questão
+#### Impacto na Experiência do Usuário:
+- **Positivo**: Usuários se sentem mais seguros sabendo que seus dados estão protegidos, principalmente ao fazer transações financeiras ou ao armazenar informações mais confidenciais.
+- **Negativo**: O uso de criptografia pode resultar em lentidão em operações de leitura e gravação de dados, especialmente em dispositivos com recursos limitados, como smartphones ou outros sistemas mais antigos.
 
-Considerando os mecanismos de segurança discutidos, analise como a implementação de controles de acesso e criptografia pode impactar a performance e a usabilidade de um sistema operacional. Em sua resposta, aborde os seguintes pontos:
-- Benefícios e desafios de cada mecanismo
-- Impacto na experiência do usuário
-- Exemplos de situações onde esses mecanismos são críticos
+#### Exemplos Críticos:
+- Em sistemas operacionais como **macOS** e **Windows**, onde a criptografia é usada para proteger dados armazenados no disco rígido (como o **BitLocker** no Windows ou o **FileVault** no macOS), garantindo q mesmo em caso de roubo do dispositivo, os dados estejam inacessíveis a outros acessos.
 
-**Dica:** Pense em como esses mecanismos são aplicados em sistemas operacionais que você utiliza no dia a dia, como Windows, Linux ou macOS.
-
-**Copilot informa**: Essa questão incentiva os alunos a refletirem sobre o equilíbrio entre segurança, performance e usabilidade, aplicando conceitos teóricos a contextos práticos.
 
 
 # Questão 4. Custo de Processamento versus Algoritmo Ótimo de Escalonamento
